@@ -11,6 +11,9 @@
 # puts "#{employee_2[:first_name]} #{employee_2[:last_name]} makes #{employee_2[:salary]} a year."
 
 class Employee
+  attr_reader :first_name, :last_name, :active
+  attr_writer :active, :salary
+
   def initialize(input_first_name, input_last_name, input_salary, input_active)
     @first_name = input_first_name
     @last_name = input_last_name
@@ -18,17 +21,17 @@ class Employee
     @active = input_active
   end
 
-  def first_name
-    @first_name
-  end
+  # def first_name
+  #   @first_name
+  # end
 
-  def last_name
-    @last_name
-  end
+  # def last_name
+  #   @last_name
+  # end
 
-  def active
-    @active
-  end
+  # def active
+  #   @active
+  # end
 
   def active=(new_active)
     @active = new_active
@@ -46,9 +49,11 @@ end
 employee_1 = Employee.new("Jimmy", "Stewart", 70000, true)
 employee_2 = Employee.new("Susan", "Messing", 80000, true)
 
-p employee_2.active
-employee_2.active = false
-p employee_2.active
+# p employee_2.active
+# employee_2.active = false
+# p employee_2.active
+
+p employee_1.first_name
 
 
 
