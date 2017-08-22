@@ -30,6 +30,10 @@ class Employee
     @active
   end
 
+  def active=(new_active)
+    @active = new_active
+  end
+
   def print_info
     puts "#{first_name} #{last_name} makes #{@salary} a year."
   end
@@ -41,10 +45,9 @@ end
 
 employee_1 = Employee.new("Jimmy", "Stewart", 70000, true)
 employee_2 = Employee.new("Susan", "Messing", 80000, true)
-# employee_1.print_info
-employee_2.print_info
-employee_2.give_annual_raise
-employee_2.print_info
+
+p employee_2.active
+employee_2.active = false
 p employee_2.active
 
 
