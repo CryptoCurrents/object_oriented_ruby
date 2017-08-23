@@ -44,11 +44,23 @@ employee_2 = Employee.new(
                           active: true
                           )
 
-p employee_1
-p employee_2
+class Manager < Employee
+  def send_report
+    puts "Sending Email..."
+    # code to send the email
+    puts "Email Sent."
+  end
+end
 
+manager = Manager.new(
+                      first_name: "Bob",
+                      last_name: "Hoskins",
+                      salary: 100000,
+                      active: true
+                      )
 
-
+manager.print_info
+manager.send_report
 
 
 
