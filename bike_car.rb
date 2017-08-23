@@ -18,32 +18,46 @@ class Vehicle
 end
 
 class Car < Vehicle
+
+  def initialize(input_options)
+    super()
+    @make = input_options[:make]
+    @model = input_options[:model]
+    @fuel = input_options[:fuel]
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 class Bike < Vehicle
+
+  def initialize(input_options)
+    super()
+    @gears = input_options[:gears] 
+    @type = input_options[:type] 
+    @weight = input_options[:weight]
+  end
+
   def ring_bell
     puts "Ring ring!"
   end
 end
 
-car = Car.new
-bike = Bike.new
+car = Car.new(
+              make: "Toyota", 
+              model: "Camary", 
+              fuel: 5
+              )
 
-car.honk_horn
-bike.ring_bell
+bike = Bike.new(
+                gears: 10,
+                type: "off road",
+                weight: 27
+                )
 
+vehicle = Vehicle.new
+
+p car
 p bike
-bike.turn('North by North-West')
-p bike
-
-
-
-
-
-
-
-
-
